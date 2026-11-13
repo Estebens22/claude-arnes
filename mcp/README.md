@@ -12,6 +12,10 @@ El arnés está pensado para **crecer**: cada herramienta que use el equipo se s
 | `taplio` | LinkedIn: programar/encolar posts, ver ideas y métricas de contenido. | Según lo que exponga la API de Taplio; si es limitada, se puentea vía **n8n** (n8n llama a Taplio). | 🔎 Por validar API |
 | `n8n` | Disparar **flujos que ya tenemos** (prospección/Apollo-reactivación, LinkedIn Café→post, etc.). | **MCP Server Trigger** de n8n (v2.27.4 en `n8n.digiworld.com.co` ya lo soporta): se expone el workflow existente como herramienta, sin montar servidor aparte. | 🔧 En construcción |
 | `google-sheets` | Guardar/leer listas (prospectos, calendario de contenido). | Connector de Google (nativo en Claude) o MCP propio. | ✅ Disponible nativo |
+| `imagen` | Generar **imágenes AI** (fotos/ilustraciones) para posts. | Modelo por API (Ideogram/Flux/Imagen — centavos/imagen) → MCP; o reusar pipeline de FullGEN. | 🔎 Elegir motor |
+| `video` | Generar **video** para posts. | Reusar **HyperFrames** (HTML→video en vps-ai, **$0**) para plantillas/animación; o modelo text-to-video por API (pago). | 🔧 Reusar HyperFrames |
+
+> **Nota importante:** Claude **no** genera imágenes/videos por sí mismo. Lo que SÍ hace hoy **sin connector ni costo** (vía *code execution*): gráficos, carruseles, tarjetas, infografías, charts y slides/PDF con HTML/código. Para **fotos/ilustraciones AI** o **video** se necesita uno de los motores de arriba.
 
 ## Qué connector sirve a qué Skill
 
