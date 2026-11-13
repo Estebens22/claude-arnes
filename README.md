@@ -4,6 +4,40 @@ Un "arnés" para que cualquiera, con su **Claude Max** (o Pro/Ultra), pase de *c
 
 No hay que programar ni mantener servidores. Subís un **Skill** (un método) y, cuando estén listos, pegás **connectors** (herramientas como Apollo o n8n).
 
+---
+
+## 🚀 Empezá acá — copiá este mensaje y pegalo en tu Claude
+
+Abrí Claude (web, escritorio o celular), **nuevo chat**, y pegá esto tal cual. Claude te va a guiar paso a paso:
+
+```
+Hola Claude 👋 Quiero que seas mi guía para instalar unas herramientas (un "arnés")
+que me van a ayudar con mi trabajo. No soy técnica, así que llevame DE A UN PASO A LA VEZ,
+con palabras simples, y esperá mi "listo" antes de pasar al siguiente. Si algo no me sale,
+ayudame con paciencia.
+
+Lo que quiero lograr: tener en vos un asistente que me ayude a CONSEGUIR CLIENTES y a
+CREAR CONTENIDO PARA LINKEDIN, mostrándome siempre todo para que yo apruebe antes de
+enviar o publicar nada.
+
+Guiame así (un paso a la vez):
+1) Cómo activar los "Skills" y la "ejecución de código" en mi cuenta: entrá a
+   claude.ai/customize/skills y decime exactamente dónde hacer clic.
+2) Voy a descargar archivos de este repositorio:
+   https://github.com/Estebens22/claude-arnes
+   Decime cómo bajar la carpeta de un Skill (botón verde "Code" → "Download ZIP"),
+   cuál carpeta de "skills/" usar primero, y cómo SUBIRLA en esa pantalla de Skills.
+3) Cuando el Skill esté subido y encendido, hacemos una PRUEBA juntas con un caso real mío.
+4) Más adelante me van a pasar "enlaces de connectors" (Apollo, imágenes, video) —
+   cuando los tenga, guiame para pegarlos en Ajustes → Conectores.
+
+Arrancá por el paso 1, explicámelo simple, y esperá mi "listo".
+```
+
+> Claude te acompaña en cada paso (los clics de subir el Skill los hacés vos en la pantalla de ajustes; Claude te dice dónde). Cuando termines, ya tenés tu asistente andando.
+
+---
+
 ## ¿Qué hay acá?
 
 | Carpeta | Qué es | Estado |
