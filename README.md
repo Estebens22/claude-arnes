@@ -9,8 +9,15 @@ No hay que programar ni mantener servidores. Subís un **Skill** (un método) y,
 | Carpeta | Qué es | Estado |
 |---|---|---|
 | `skills/` | **Skills** = métodos que le enseñás a tu Claude (`SKILL.md`). Se suben en `claude.ai/customize/skills`. | ✅ Listo para usar |
-| `mcp/` | **Connectors (MCP)** = herramientas reales (Apollo, n8n) que Claude usa por una URL. | 🔧 En construcción |
-| `docs/` | Guía para no técnicos + guion de clase. | ✅ |
+| `mcp/` | **Connectors (MCP)** = herramientas reales (Apollo, Taplio, n8n) que Claude usa por una URL. | 🔧 En construcción |
+| `docs/` | Guía para no técnicos + guion de clase + cómo agregar herramientas. | ✅ |
+
+### Skills disponibles
+
+- **`prospeccion-con-revision`** — conseguir clientes: arma lista de prospectos + correos personalizados, con aprobación antes de enviar. (Herramienta: Apollo)
+- **`contenido-linkedin-con-revision`** — crear posts/carruseles de LinkedIn en tu voz, con aprobación antes de publicar. (Herramienta: Taplio)
+
+Este catálogo **crece**: cada herramienta que uses (Apollo, Taplio, n8n, tu CRM…) se suma como un Skill y/o un connector. Ver [`docs/como-agregar-herramientas.md`](docs/como-agregar-herramientas.md).
 
 ## Empezá por acá
 
