@@ -12,10 +12,17 @@ El arnés está pensado para **crecer**: cada herramienta que use el equipo se s
 | `taplio` | LinkedIn: programar/encolar posts, ver ideas y métricas de contenido. | Según lo que exponga la API de Taplio; si es limitada, se puentea vía **n8n** (n8n llama a Taplio). | 🔎 Por validar API |
 | `n8n` | Disparar **flujos que ya tenemos** (prospección/Apollo-reactivación, LinkedIn Café→post, etc.). | **MCP Server Trigger** de n8n (v2.27.4 en `n8n.digiworld.com.co` ya lo soporta): se expone el workflow existente como herramienta, sin montar servidor aparte. | 🔧 En construcción |
 | `google-sheets` | Guardar/leer listas (prospectos, calendario de contenido). | Connector de Google (nativo en Claude) o MCP propio. | ✅ Disponible nativo |
-| `imagen` | Generar **imágenes AI** (fotos/ilustraciones) para posts. | Modelo por API (Ideogram/Flux/Imagen — centavos/imagen) → MCP; o reusar pipeline de FullGEN. | 🔎 Elegir motor |
-| `video` | Generar **video** para posts. | Reusar **HyperFrames** (HTML→video en vps-ai, **$0**) para plantillas/animación; o modelo text-to-video por API (pago). | 🔧 Reusar HyperFrames |
+| `imagen` | Generar **imágenes AI** (fotos/ilustraciones) para posts — **gratis**. | Motor gratuito hosteado por nosotros (Flux/SD open-source o API gratis) → MCP. Las usuarias solo pegan la URL. | 🔧 En construcción ($0) |
+| `video` | Generar **video** para posts — **gratis**. | **HyperFrames** propio (HTML→video en vps-ai, **$0**) expuesto como connector. | 🔧 En construcción ($0) |
 
-> **Nota importante:** Claude **no** genera imágenes/videos por sí mismo. Lo que SÍ hace hoy **sin connector ni costo** (vía *code execution*): gráficos, carruseles, tarjetas, infografías, charts y slides/PDF con HTML/código. Para **fotos/ilustraciones AI** o **video** se necesita uno de los motores de arriba.
+> **Meta del arnés: todo GRATIS y desde el app de Claude (web/escritorio/móvil), sin Claude Code.** Las usuarias no programan ni usan terminal: solo **pegan URLs de connectors** una vez.
+>
+> **Reparto de lo visual (todo $0):**
+> - **Gráficos/carruseles/tarjetas/infografías/charts/slides** → Claude los hace **ya, nativo** con *code execution* (sin connector).
+> - **Fotos/ilustraciones AI** → connector `imagen` a un **motor gratuito que hosteamos** (no pagan por imagen).
+> - **Video** → connector `video` a **HyperFrames** (nuestro, $0).
+>
+> Nota de expectativa honesta: lo gratis da calidad "muy buena", no nivel Midjourney/Veo. Para realismo tope habría que pagar — pero **no es necesario** para el objetivo.
 
 ## Qué connector sirve a qué Skill
 
