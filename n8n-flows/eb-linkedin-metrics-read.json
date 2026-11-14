@@ -1,1 +1,120 @@
-{"id":"ozqkJf6OZCtWZ038","name":"EB LinkedIn Metrics Read (recon)","description":null,"active":false,"activeVersionId":null,"createdAt":"2026-11-05T00:48:39.445Z","updatedAt":"2026-11-05T00:48:39.445Z","isArchived":false,"versionId":"8d88762a-f8cf-4e71-ab43-8b28375c565b","versionCounter":1,"sourceWorkflowId":null,"triggerCount":0,"nodes":[{"id":"5e0d1897-2a0e-44af-be9c-f96cd755ff3b","name":"Recibir URN","type":"n8n-nodes-base.webhook","typeVersion":2.1,"position":[0,0],"parameters":{"httpMethod":"POST","path":"eb-li-metrics-read"},"webhookId":"fce09343-3dfd-493c-be26-033cc2623aa5"},{"id":"94ef18b1-756d-47c9-8fec-1551385ed327","name":"Leer SocialActions","type":"n8n-nodes-base.httpRequest","typeVersion":4.2,"position":[224,0],"parameters":{"method":"GET","url":"=https://api.linkedin.com/v2/socialActions/{{ encodeURIComponent($json.body.urn) }}","authentication":"predefinedCredentialType","nodeCredentialType":"linkedInOAuth2Api","sendHeaders":true,"headerParameters":{"parameters":[{"name":"X-Restli-Protocol-Version","value":"2.0.0"}]},"options":{"response":{"response":{"fullResponse":true,"neverError":true}}}},"credentials":{"linkedInOAuth2Api":{"id":"bl32UpwwVswKe2dF","name":"LinkedIn account"}}}],"connections":{"Recibir URN":{"main":[[{"node":"Leer SocialActions","type":"main","index":0}]]}},"nodeGroups":[],"settings":{"executionOrder":"v1","availableInMCP":true},"staticData":null,"pinData":null,"meta":{"aiBuilderAssisted":true,"builderVariant":"mcp"},"tags":[],"shared":[{"role":"workflow:owner","workflowId":"ozqkJf6OZCtWZ038","projectId":"mXe5aCCYBtsFklPP","project":{"id":"mXe5aCCYBtsFklPP","name":"kubika projects","type":"team","icon":{"type":"icon","value":"layers"},"description":"","customTelemetryTags":[],"creatorId":"b468c565-e445-4549-8f41-b8a65d79b206","createdAt":"2026-10-23T19:20:15.286Z","updatedAt":"2026-10-23T19:20:23.000Z"},"createdAt":"2026-11-05T00:48:39.448Z","updatedAt":"2026-11-05T00:48:39.448Z"}],"activeVersion":null,"parentFolder":null}
+{
+  "id": "ozqkJf6OZCtWZ038",
+  "name": "LinkedIn Metrics Read (plantilla)",
+  "description": null,
+  "active": false,
+  "activeVersionId": null,
+  "createdAt": "2026-11-05T00:48:39.445Z",
+  "updatedAt": "2026-11-05T00:48:39.445Z",
+  "isArchived": false,
+  "versionId": "8d88762a-f8cf-4e71-ab43-8b28375c565b",
+  "versionCounter": 1,
+  "sourceWorkflowId": null,
+  "triggerCount": 0,
+  "nodes": [
+    {
+      "id": "5e0d1897-2a0e-44af-be9c-f96cd755ff3b",
+      "name": "Recibir URN",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "eb-li-metrics-read"
+      },
+      "webhookId": "fce09343-3dfd-493c-be26-033cc2623aa5"
+    },
+    {
+      "id": "94ef18b1-756d-47c9-8fec-1551385ed327",
+      "name": "Leer SocialActions",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        224,
+        0
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "=https://api.linkedin.com/v2/socialActions/{{ encodeURIComponent($json.body.urn) }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "linkedInOAuth2Api",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-Restli-Protocol-Version",
+              "value": "2.0.0"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true
+            }
+          }
+        }
+      },
+      "credentials": {
+        "linkedInOAuth2Api": {
+          "id": "bl32UpwwVswKe2dF",
+          "name": "LinkedIn account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Recibir URN": {
+      "main": [
+        [
+          {
+            "node": "Leer SocialActions",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "nodeGroups": [],
+  "settings": {
+    "executionOrder": "v1",
+    "availableInMCP": true
+  },
+  "staticData": null,
+  "pinData": null,
+  "meta": {
+    "aiBuilderAssisted": true,
+    "builderVariant": "mcp"
+  },
+  "tags": [],
+  "shared": [
+    {
+      "role": "workflow:owner",
+      "workflowId": "ozqkJf6OZCtWZ038",
+      "projectId": "mXe5aCCYBtsFklPP",
+      "project": {
+        "id": "mXe5aCCYBtsFklPP",
+        "name": "mis proyectos",
+        "type": "team",
+        "icon": {
+          "type": "icon",
+          "value": "layers"
+        },
+        "description": "",
+        "customTelemetryTags": [],
+        "creatorId": "b468c565-e445-4549-8f41-b8a65d79b206",
+        "createdAt": "2026-10-23T19:20:15.286Z",
+        "updatedAt": "2026-10-23T19:20:23.000Z"
+      },
+      "createdAt": "2026-11-05T00:48:39.448Z",
+      "updatedAt": "2026-11-05T00:48:39.448Z"
+    }
+  ],
+  "activeVersion": null,
+  "parentFolder": null
+}
