@@ -10,7 +10,6 @@ Estos tres son los que automatizan tu LinkedIn de punta a punta: redactan, publi
 
 | Archivo | Qué hace | Qué necesitás llenar |
 |---|---|---|
-| `kubika-publicacion-diaria-linkedin.json` | **Publicación diaria de marca.** Cada día arma un post con IA según tu línea de contenido y lo publica en la **página** de tu empresa en LinkedIn. | `PEGA_AQUI_TU_TOKEN_LINKEDIN`, `TU_ORG_ID` (ID de la página), y tus credenciales de IA. |
 | `marca-personal-linkedin.json` | **Marca personal.** Mira tu historial de posts + directrices, genera una publicación nueva en tu voz para tu **perfil** y la deja lista/publicada. | `PEGA_AQUI_TU_TOKEN_LINKEDIN`, `TU_SHEET_ID` (historial), y tus credenciales de IA. |
 | `eb-linkedin-metrics-read.json` | **Lectura de métricas (recon).** Lee el rendimiento de tus publicaciones de LinkedIn para alimentar a los otros flujos (qué funcionó). **Solo lectura.** | `PEGA_AQUI_TU_TOKEN_LINKEDIN`, `TU_ORG_ID`. |
 
