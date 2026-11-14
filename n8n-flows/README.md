@@ -4,7 +4,19 @@ Acá están los **workflows de ejemplo** listos para que los lleves a **tu propi
 
 > ¿Qué es n8n? Una herramienta (gratis, se puede auto-hospedar) para **automatizar tareas**: "cuando pase X, hacé Y". Es el motor de lo que corre **solo/recurrente**. Si no tenés n8n todavía, se puede instalar gratis — pedí ayuda al equipo.
 
-## Los flujos
+## 🔵 Flujos de LinkedIn (el foco de la clase)
+
+Estos tres son los que automatizan tu LinkedIn de punta a punta: redactan, publican y aprenden de las métricas. Importalos a **tu** n8n y conectá tus credenciales.
+
+| Archivo | Qué hace | Qué necesitás llenar |
+|---|---|---|
+| `kubika-publicacion-diaria-linkedin.json` | **Publicación diaria de marca.** Cada día arma un post con IA según tu línea de contenido y lo publica en la **página** de tu empresa en LinkedIn. | `PEGA_AQUI_TU_TOKEN_LINKEDIN`, `TU_ORG_ID` (ID de la página), y tus credenciales de IA. |
+| `marca-personal-linkedin.json` | **Marca personal.** Mira tu historial de posts + directrices, genera una publicación nueva en tu voz para tu **perfil** y la deja lista/publicada. | `PEGA_AQUI_TU_TOKEN_LINKEDIN`, `TU_SHEET_ID` (historial), y tus credenciales de IA. |
+| `eb-linkedin-metrics-read.json` | **Lectura de métricas (recon).** Lee el rendimiento de tus publicaciones de LinkedIn para alimentar a los otros flujos (qué funcionó). **Solo lectura.** | `PEGA_AQUI_TU_TOKEN_LINKEDIN`, `TU_ORG_ID`. |
+
+> Cada una conecta **su propio** LinkedIn y su propia cuenta de IA: los flujos son la receta, los datos son tuyos. El token de LinkedIn se saca de tu app de LinkedIn Developers; si no sabés cómo, pedile ayuda a Claude con el Skill.
+
+## Flujos de ejemplo (genéricos)
 
 | Archivo | Qué hace | Qué necesitás llenar |
 |---|---|---|

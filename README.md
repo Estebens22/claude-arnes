@@ -44,7 +44,7 @@ Arrancá por el paso 1, explicámelo simple, y esperá mi "listo".
 |---|---|---|
 | `skills/` | **Skills** = métodos que le enseñás a tu Claude (`SKILL.md`). Se suben en `claude.ai/customize/skills`. | ✅ Listo para usar |
 | `mcp/` | **Connectors (MCP)** = herramientas reales (Apollo, Taplio, n8n) que Claude usa por una URL. | 🔧 En construcción |
-| `n8n-flows/` | **Flujos de n8n** listos para importar a **tu propio n8n** (WhatsApp con IA, lead→Sheets+correo, reporte semanal). Plantillas limpias. | ✅ Listos para importar |
+| `n8n-flows/` | **Flujos de n8n** listos para importar a **tu propio n8n**. Incluye los 3 de **LinkedIn** (publicación de marca, marca personal, lectura de métricas) + 3 de ejemplo. Plantillas limpias (sin secretos). | ✅ Listos para importar |
 | `docs/` | Guía para no técnicos + guion de clase + cómo agregar herramientas. | ✅ |
 
 ### Skills disponibles
