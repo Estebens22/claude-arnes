@@ -38,6 +38,12 @@ Al final, NO lo actives: mostrámelo para que yo lo revise y confirme.
 
 > El flujo de métricas solo pide `PEGA_AQUI_TU_TOKEN_LINKEDIN` (token de tu app de LinkedIn Developers). Mismo truco: pedile a Claude que te guíe a sacarlo y lo deje puesto.
 
+### 🧠 El modelo de IA del flujo es APARTE de tu Claude Max
+
+Dentro de n8n, el nodo de IA **no usa tu Claude de la app** — n8n necesita su **propia API key** del modelo. El flujo viene con **Google Gemini**, que tiene **capa gratis** (sacás tu key en [Google AI Studio](https://aistudio.google.com/apikey)) → así el flujo corre **$0**. Tu Claude Max sigue siendo tu asistente en la **app** (escribir/revisar posts); el flujo en n8n es el motor que corre solo y pide su propia llave gratis.
+
+> ¿Querés usar Claude en vez de Gemini dentro del flujo? Se puede (el flujo ya trae el nodo de Anthropic), pero esa API **es de pago** y no entra en tu suscripción Max. Para gratis, dejá Gemini.
+
 ## Flujos de ejemplo (genéricos)
 
 | Archivo | Qué hace | Qué necesitás llenar |
