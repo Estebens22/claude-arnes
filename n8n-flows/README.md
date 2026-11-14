@@ -6,14 +6,37 @@ Acá están los **workflows de ejemplo** listos para que los lleves a **tu propi
 
 ## 🔵 Flujos de LinkedIn (el foco de la clase)
 
-Estos tres son los que automatizan tu LinkedIn de punta a punta: redactan, publican y aprenden de las métricas. Importalos a **tu** n8n y conectá tus credenciales.
+Estos dos automatizan tu LinkedIn de punta a punta: redactan, publican y aprenden de las métricas. Importalos a **tu** n8n y conectá tus credenciales.
 
 | Archivo | Qué hace | Qué necesitás llenar |
 |---|---|---|
-| `marca-personal-linkedin.json` | **Marca personal.** Mira tu historial de posts + directrices, genera una publicación nueva en tu voz para tu **perfil** y la deja lista/publicada. | `PEGA_AQUI_TU_TOKEN_LINKEDIN`, `TU_SHEET_ID` (historial), y tus credenciales de IA. |
-| `eb-linkedin-metrics-read.json` | **Lectura de métricas (recon).** Lee el rendimiento de tus publicaciones de LinkedIn para alimentar a los otros flujos (qué funcionó). **Solo lectura.** | `PEGA_AQUI_TU_TOKEN_LINKEDIN`, `TU_ORG_ID`. |
+| `marca-personal-linkedin.json` | **Marca personal.** Mira tu historial de posts + directrices, genera una publicación en tu voz para tu **perfil** y la deja lista/publicada; recibís y aprobás desde Telegram. | Tu **perfil** (`[tu profesión y especialidad]`, `[tu ciudad/país]`), tu `TU_TELEGRAM_CHAT_ID`, y las **credenciales**: LinkedIn, IA (Gemini/Anthropic) y Telegram. |
+| `eb-linkedin-metrics-read.json` | **Lectura de métricas (recon).** Lee el rendimiento de tus publicaciones de LinkedIn para alimentar al flujo de contenido (qué funcionó). **Solo lectura.** | `PEGA_AQUI_TU_TOKEN_LINKEDIN`. |
 
-> Cada una conecta **su propio** LinkedIn y su propia cuenta de IA: los flujos son la receta, los datos son tuyos. El token de LinkedIn se saca de tu app de LinkedIn Developers; si no sabés cómo, pedile ayuda a Claude con el Skill.
+> Cada una conecta **su propio** LinkedIn, su propia IA y su propio Telegram: los flujos son la receta, los datos son tuyos. ¿No sabés sacar un dato (token, chat de Telegram)? Pegale a tu Claude el prompt de abajo y te guía.
+
+### 🤖 Que Claude te ayude a llenar los datos
+
+Después de importar el flujo, pegale esto a tu Claude (con el connector de n8n conectado) y te va pidiendo tus datos de a uno y los deja puestos:
+
+```
+Claude, ya importé el flujo "Marca Personal LinkedIn (plantilla)" en mi n8n.
+Ayudame a completarlo con MIS datos, de a un paso a la vez y con palabras
+simples. Pedime cada cosa, yo te la paso, y vos la dejás puesta en el nodo
+que corresponde. Lo que hay que llenar:
+
+1) MI PERFIL (va en los prompts de IA): mi profesión y especialidad, mis años
+   de experiencia y 1-2 logros, mi ciudad/país. Preguntámelo y reemplazá los
+   [tu profesión y especialidad] y [tu ciudad/país].
+2) MI TELEGRAM: ayudame a conseguir mi "chat id" (decime cómo, con el bot
+   @userinfobot) y reemplazá TU_TELEGRAM_CHAT_ID en todos los nodos.
+3) MIS CREDENCIALES en n8n: LinkedIn, un modelo de IA (Google Gemini o
+   Anthropic) y Telegram. Decime cómo conectar cada una con el botón de
+   credenciales de n8n.
+Al final, NO lo actives: mostrámelo para que yo lo revise y confirme.
+```
+
+> El flujo de métricas solo pide `PEGA_AQUI_TU_TOKEN_LINKEDIN` (token de tu app de LinkedIn Developers). Mismo truco: pedile a Claude que te guíe a sacarlo y lo deje puesto.
 
 ## Flujos de ejemplo (genéricos)
 
