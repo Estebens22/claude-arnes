@@ -38,6 +38,31 @@ Arrancá por el paso 1, explicámelo simple, y esperá mi "listo".
 
 ---
 
+## ⚡ Si ya tenés el connector de n8n conectado — bajá el flujo de LinkedIn con Claude
+
+Si ya conectaste tu n8n a Claude (Ajustes → Conectores), no hace falta importar a mano: pegale esto a Claude y él baja el flujo del repo y lo importa a tu n8n.
+
+**Flujo de marca personal:**
+```
+Claude, usá el connector de n8n que ya tengo conectado para importar
+este flujo de LinkedIn a mi n8n:
+
+https://raw.githubusercontent.com/Estebens22/claude-arnes/main/n8n-flows/marca-personal-linkedin.json
+
+Bajá el JSON de ese link, importalo como un workflow nuevo en mi n8n, y
+después decime qué datos tengo que rellenar (los PEGA_AQUI_TU_... y las
+credenciales). No lo actives hasta que yo confirme.
+```
+
+**Flujo de métricas (opcional):** el mismo prompt, cambiando el link por:
+```
+https://raw.githubusercontent.com/Estebens22/claude-arnes/main/n8n-flows/eb-linkedin-metrics-read.json
+```
+
+> Si tu connector de n8n es **solo lectura** y no puede crear el workflow, el plan B de 10 segundos: en tu n8n → **⋯ → Import from File** y pegás el link o el archivo. Ver [`n8n-flows/README.md`](n8n-flows/README.md).
+
+---
+
 ## ¿Qué hay acá?
 
 | Carpeta | Qué es | Estado |
