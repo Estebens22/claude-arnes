@@ -30,7 +30,7 @@ El arnés está hecho para **crecer**. Cada vez que el equipo empiece a usar una
 1. Mirá si la herramienta **ya tiene un MCP oficial** (muchas SaaS lo están sacando) → si sí, se agrega directo por URL, sin código.
 2. Si no, dos caminos:
    - **API propia → servidor MCP** en `mcp/<herramienta>/` (hosteado en nuestra infra, alcanzable por internet).
-   - **Vía n8n**: si la herramienta no tiene MCP pero sí API, se arma un workflow en n8n y se expone con el **MCP Server Trigger** (así reusamos lo que ya corre en `n8n.digiworld.com.co`).
+   - **Vía n8n**: si la herramienta no tiene MCP pero sí API, se arma un workflow en tu n8n y se expone con el **MCP Server Trigger** (reusás flujos que ya tengas corriendo).
 3. Secretos (API keys/tokens) **nunca en el repo** → variables de entorno en el host.
 4. Documentá en `mcp/README.md` qué hace, qué scopes (solo lo necesario) y cómo se agrega.
 

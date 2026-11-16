@@ -745,7 +745,7 @@
       "credentials": {
         "linkedInOAuth2Api": {
           "id": "VuaTUUNvOErCG2dS",
-          "name": "LinkedIn juanes"
+          "name": "LinkedIn"
         }
       },
       "onError": "continueErrorOutput"
